@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44745" started-at="2020-05-24T12:06:13 IST" finished-at="2020-05-24T12:06:57 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44745" started-at="2020-05-24T12:06:13 IST" finished-at="2020-05-24T12:06:57 IST">
+      <class name="Com.TestingShatr.RegressionTestCases.Amezon_Test">
+        <test-method status="PASS" signature="tc_01()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_01" is-config="true" duration-ms="8376" started-at="2020-05-24T12:06:13 IST" finished-at="2020-05-24T12:06:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_01 -->
+        <test-method status="PASS" signature="tc_02()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_02" duration-ms="15338" started-at="2020-05-24T12:06:21 IST" finished-at="2020-05-24T12:06:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_02 -->
+        <test-method status="PASS" signature="tc_03()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_03" duration-ms="2183" started-at="2020-05-24T12:06:36 IST" finished-at="2020-05-24T12:06:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_03 -->
+        <test-method status="PASS" signature="tc_04()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_04" duration-ms="11852" started-at="2020-05-24T12:06:38 IST" finished-at="2020-05-24T12:06:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_04 -->
+        <test-method status="PASS" signature="tc_05()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_05" duration-ms="991" started-at="2020-05-24T12:06:50 IST" finished-at="2020-05-24T12:06:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_05 -->
+        <test-method status="PASS" signature="tc_06()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_06" duration-ms="298" started-at="2020-05-24T12:06:51 IST" finished-at="2020-05-24T12:06:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_06 -->
+        <test-method status="PASS" signature="tc_07()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_07" duration-ms="328" started-at="2020-05-24T12:06:52 IST" finished-at="2020-05-24T12:06:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_07 -->
+        <test-method status="PASS" signature="tc_09()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_09" duration-ms="433" started-at="2020-05-24T12:06:52 IST" finished-at="2020-05-24T12:06:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_09 -->
+        <test-method status="PASS" signature="tc_10()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_10" duration-ms="4738" started-at="2020-05-24T12:06:52 IST" finished-at="2020-05-24T12:06:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_10 -->
+        <test-method status="PASS" signature="tc_11()[pri:0, instance:Com.TestingShatr.RegressionTestCases.Amezon_Test@2a556333]" name="tc_11" duration-ms="122" started-at="2020-05-24T12:06:57 IST" finished-at="2020-05-24T12:06:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_11 -->
+      </class> <!-- Com.TestingShatr.RegressionTestCases.Amezon_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
