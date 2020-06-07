@@ -1,4 +1,3 @@
-package Com.TestingShatra.Keywords;
 
 
 import java.awt.image.BufferedImage;
@@ -41,9 +40,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Keyword {
-	/*
-	 * This method is used for Get Webelement.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	/**
+	 * This method is used to get WebElement from DOM.
+	 * @param locaterType
+	 * @param LocatorValue
+	 * @return WebElement
+	 * @author Punam Shirsath
 	 */
 	public static WebElement getWebElement(String locaterType,String LocatorValue) {
 		WebElement element=null;
@@ -71,11 +73,15 @@ public class Keyword {
 		}
 		return element;
 	}
-	/*
-	 * This method is used for Open Browser.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
-	 */
-
+	
+	
+	
+	
+    /**
+     * This Method is used to Launch Specified Browser.
+     * @param browserName
+     * @author Punam Shirsath
+     */
 	public static void openBrowser(String browserName) {
 		
 		switch(browserName)
@@ -92,34 +98,53 @@ public class Keyword {
 			System.out.println("Invalid browserName: "+browserName);
 		}
 	}
-	/*
-	 * This method is used for Open URL.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	
+	
+	/**
+	 * This method is to open specified URL in Specified Browser.
+	 * @param url
+	 * @@author Punam Shirsath
 	 */
 	public static  void openURL(String url)
 	{
 		Constant.driver.get(url);
 	}
-	/*
-	 * This method is used for Enter TextL.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	
+	
+	
+	/**
+	 * This method is used to pass text for search box WebElement.
+	 * @param locaterType
+	 * @param LocatorValue
+	 * @param textToEnter
+	 * @author Manisha Kale
 	 */
 	public static void enterText(String locaterType,String LocatorValue,String textToEnter) {
 		
 		getWebElement(locaterType, LocatorValue).sendKeys(textToEnter);
   
 	}
-	/*
-	 * This method is used for Click  On WebElement.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
-	 */
+	
+	
+
+    /**
+     * This method is used to click for specific WebElement.
+     * @param locaterType
+     * @param LocatorValue
+     * @author Manisha Kale
+     */
 	public static void clickOnElement(String locaterType,String LocatorValue) {
-getWebElement(locaterType, LocatorValue).click();
+         getWebElement(locaterType, LocatorValue).click();
 
 	}
-	/*
-	 * This method is used for Select Value.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	
+	
+	/**
+	 * This method is used to Select Value from Dropdown.
+	 * @param locaterType
+	 * @param LocatorValue
+	 * @param textToselect
+	 * @author Punam Shirsath
 	 */
 	public static void selectValue(String locaterType,String LocatorValue,String textToselect) {
 		WebElement element=getWebElement(locaterType, LocatorValue);
@@ -128,42 +153,17 @@ getWebElement(locaterType, LocatorValue).click();
 		select.selectByVisibleText(textToselect);
 
 	}
-	/*
-	 * This method is used for Find WebElement.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
-	 */
-	public static WebElement findWebElement(String locaterType,String LocatorValue) {
-		WebElement element=null;
-		
-		switch(locaterType)
-		{
-		case"XPATH":
-			
-			element=Constant.driver.findElement(By.xpath(LocatorValue));
 	
-			break;
-		case"CSS":
-			element=Constant.driver.findElement(By.cssSelector(LocatorValue));
-			break;
-		case"ID":
-			element=Constant.driver.findElement(By.cssSelector(LocatorValue));
-			break;
-		case"LINKTEXT":
-			element=Constant.driver.findElement(By.linkText(LocatorValue));
-			break;
-		case"PARTIAL_LINKTEXT":
-			element=Constant.driver.findElement(By.partialLinkText(LocatorValue));
-			break;
-		default:
-			System.out.println("Invalid LOcatorType: "+locaterType+". Expected XPATH,CSS,ID,LINKTEXT,PARTIAL_LINKTEXT");
-		}
-		return element;
-	}
 	
-	/*
-	 * This method is used for Implicit Wait URL.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
-	 */
+	
+
+    /**
+     * This method is used to Apply Implicit wait for specific WebElement.
+     * @param locatorValue
+     * @param locaterType
+     * @return WebElement
+     * @author Manisha Kale
+     */
 	public static Timeouts   implicit_Wait(long locatorValue,String locaterType) {
 		Timeouts element=null;
 		switch(locaterType)
@@ -198,9 +198,14 @@ getWebElement(locaterType, LocatorValue).click();
 		return element;
 	
 	}
-	/*
-	 * This method is used for Capture Screen Shot.
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	
+	
+	/**
+	 * This method is used to capture screenshot and save file with Date-Time Format with Specific Extension
+	 * @param fileName
+	 * @param extension
+	 * @throws IOException
+	 * @author Manisha Kale
 	 */
 	public static void captureScreenshot(String fileName,String extension)throws IOException
 	{
@@ -216,9 +221,11 @@ getWebElement(locaterType, LocatorValue).click();
 	FileUtils.copyFile(scrFile, new File("D:/WorkSapce/Keyword/shots/" + fileName+" "+cal1+extension));
 	}
 	
-	/*
-	 * This method is used for Add logger .
-	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
+	
+	/**
+	 * This method is used for Add logger
+	 * @param locaterType
+	 * @author Manisha Kale
 	 */
 	public static  void logger_add(String locaterType) {
 	         Logger logger=Logger.getLogger("Keyword");
@@ -274,15 +281,15 @@ getWebElement(locaterType, LocatorValue).click();
 		case"CSS":
 			liList=  Constant.driver.findElements(By.cssSelector(LocatorValue));
 			break;
-//		case"ID":
-//			liList= Constant.driver.findElement(By.cssSelector(LocatorValue));
-//			break;
-//		case"LINKTEXT":
-//			liList=Constant.driver.findElement(By.linkText(LocatorValue));
-//			break;
-//		case"PARTIAL_LINKTEXT":
-//			liList= Constant.driver.findElement(By.partialLinkText(LocatorValue));
-//			break;
+       //case"ID":
+		//	 liList= Constant.driver.findElement(By.id(LocatorValue));
+		 //  break;
+		//case"LINKTEXT":
+		   //  liList=Constant.driver.findElement(By.linkText(LocatorValue));
+			//break;
+	//case"PARTIAL_LINKTEXT":
+	//	liList= Constant.driver.findElement(By.partialLinkText(LocatorValue));
+		//break;
 		default:
 			System.out.println("Invalid LOcatorType: "+locaterType+". Expected XPATH,CSS,ID,LINKTEXT,PARTIAL_LINKTEXT");
 		}
@@ -298,17 +305,21 @@ getWebElement(locaterType, LocatorValue).click();
 		return actualResult;
 	}
 	
-	/*
-	 * This method is used for Maximize Window.
-	 * @Author Poonam Shirsat                                                                                                                                                                                                                                                                                                                                                       
+	
+	
+	/**
+	 * This method is used to maximize Window.
+	 * @author Punam Shirsath
 	 */
 	public static void maximize_Window()
 	{
 	Constant.driver.manage().window().maximize();
 
 	}
+	
+	
 	/*
-	 * This method is used for Mouse Over on Web Element.
+	 * This method is used to move Mouse Over particular WebElement.
 	 * @Author Manisha Kale                                                                                                                                                                                                                                                                                                                                                       
 	 */
 	public static void moveToElement(String locatorType, String locatorValue) {
@@ -318,6 +329,7 @@ getWebElement(locaterType, LocatorValue).click();
 			
 	}
 	
+	
 	/*
 	 * This method is used for Close Browser.
 	 * @Author Nishant Choudhari                                                                                                                                                                                                                                                                                                                                                       
@@ -325,16 +337,19 @@ getWebElement(locaterType, LocatorValue).click();
 	public static void closeBrowser() {
 		Constant.driver.close();
 	}
+	
+	
 	/*
-	 * This method is used for Close All Browser.
-	 * @Author Poonam Shirsat                                                                                                                                                                                                                                                                                                                                                        
+	 * This method is used for Close All Browser Window opened by Webdriver Instance.
+	 * @Author Punam Shirsath                                                                                                                                                                                                                                                                                                                                                        
 	 */
 	public static void closeAllBrowsers() {
 		Constant.driver.quit();
 
 	}
+	
 	/*
-	 * This method is used for Close Alert box.
+	 * This method is used to Check is Alert is Present or not if Present then close.
 	 * @Author Nishant Choudhari                                                                                                                                                                                                                                                                                                                                                       
 	 */
 public static boolean isAlertPresent() {
@@ -350,8 +365,9 @@ public static boolean isAlertPresent() {
 		}
 		
 	}
+
 /*
- * This method is used for Close Browser.
+ * This method is used to handle window.
  * @Author Nishant Choudhari                                                                                                                                                                                                                                                                                                                                                       
  */
 public static void windowHandle() {
@@ -365,6 +381,7 @@ public static void windowHandle() {
 	
 }
 
+<<<<<<< HEAD
 public static void windowHandle(int child) {
 	//String parentwindow=Constant.driver.getWindowHandle();
 	Set<String> allkeys=Constant.driver.getWindowHandles();
@@ -375,4 +392,6 @@ public static void windowHandle(int child) {
 	
 }
 
+=======
+>>>>>>> 0562b3f3717f8f67ab310261c1a202df8f6898d7
 }
