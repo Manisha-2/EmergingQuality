@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import Com.TestingShatra.Keywords.Keyword;
-
 public class Amazon_Pay_POM {
 	//======================================7====
 	@FindBy(xpath="//span[contains(text(),'COVID-19 Donation')]")

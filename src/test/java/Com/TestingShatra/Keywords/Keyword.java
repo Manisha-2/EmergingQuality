@@ -365,7 +365,7 @@ public static void windowHandle() {
 	
 }
 
-public static void windowHandle1(int child) {
+public static void windowHandle(int child) {
 	//String parentwindow=Constant.driver.getWindowHandle();
 	Set<String> allkeys=Constant.driver.getWindowHandles();
 	ArrayList<String> childWindow=new ArrayList<String>(allkeys);
