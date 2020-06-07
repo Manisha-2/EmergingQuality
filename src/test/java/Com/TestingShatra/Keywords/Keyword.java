@@ -1,4 +1,4 @@
-
+package Com.TestingShatra.Keywords;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -381,7 +381,7 @@ public static void windowHandle() {
 	
 }
 
-<<<<<<< HEAD
+
 public static void windowHandle(int child) {
 	//String parentwindow=Constant.driver.getWindowHandle();
 	Set<String> allkeys=Constant.driver.getWindowHandles();
@@ -392,6 +392,5 @@ public static void windowHandle(int child) {
 	
 }
 
-=======
->>>>>>> 0562b3f3717f8f67ab310261c1a202df8f6898d7
+
 }

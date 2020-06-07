@@ -16,7 +16,7 @@ public class Create_Account {
 		Keyword.openBrowser("Chrome");
 		Keyword.openURL("https://www.amazon.in/");
 		Actions action =new Actions(Constant.driver);
-		WebElement element=Keyword.findWebElement("XPATH", "//*[@id=\"nav-link-accountList\"]");
+		WebElement element=Keyword.getWebElement("XPATH", "//*[@id=\"nav-link-accountList\"]");
 		Keyword.implicit_Wait(5, "SECONDS");
 		action.moveToElement(element);
 		Keyword.implicit_Wait(5, "SECONDS");
