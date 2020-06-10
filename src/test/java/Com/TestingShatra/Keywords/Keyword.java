@@ -44,7 +44,7 @@ public class Keyword {
 	 * This method is used to get WebElement from DOM.
 	 * 
 	 * @param locatorType
-	 * @param LocatorValue
+	 * @param locatorValue
 	 * @return WebElement
 	 * @author Punam Shirsath
 	 */
@@ -101,7 +101,7 @@ public class Keyword {
 	 * This method is to open specified URL in Specified Browser.
 	 * 
 	 * @param url
-	 * @@author Punam Shirsath
+	 * @author Punam Shirsath
 	 */
 	public static void openURL(String url) {
 		Constant.driver.get(url);
@@ -111,13 +111,13 @@ public class Keyword {
 	 * This method is used to pass text for search box WebElement.
 	 * 
 	 * @param locatorType
-	 * @param LocatorValue
+	 * @param locatorValue
 	 * @param textToEnter
 	 * @author Manisha Kale
 	 */
-	public static void enterText(String locatorType, String LocatorValue, String textToEnter) {
+	public static void enterText(String locatorType, String locatorValue, String textToEnter) {
 
-		getWebElement(locatorType, LocatorValue).sendKeys(textToEnter);
+		getWebElement(locatorType, locatorValue).sendKeys(textToEnter);
 
 	}
 
@@ -125,11 +125,11 @@ public class Keyword {
 	 * This method is used to click for specific WebElement.
 	 * 
 	 * @param locatorType
-	 * @param LocatorValue
+	 * @param locatorValue
 	 * @author Manisha Kale
 	 */
-	public static void clickOnElement(String locatorType, String LocatorValue) {
-		getWebElement(locatorType, LocatorValue).click();
+	public static void clickOnElement(String locatorType, String locatorValue) {
+		getWebElement(locatorType, locatorValue).click();
 
 	}
 
@@ -137,12 +137,12 @@ public class Keyword {
 	 * This method is used to Select Value from Dropdown.
 	 * 
 	 * @param locatorType
-	 * @param LocatorValue
+	 * @param locatorValue
 	 * @param textToselect
 	 * @author Punam Shirsath
 	 */
-	public static void selectValue(String locatorType, String LocatorValue, String textToselect) {
-		WebElement element = getWebElement(locatorType, LocatorValue);
+	public static void selectValue(String locatorType, String locatorValue, String textToselect) {
+		WebElement element = getWebElement(locatorType, locatorValue);
 
 		Select select = new Select(element);
 		select.selectByVisibleText(textToselect);
@@ -184,7 +184,7 @@ public class Keyword {
 			break;
 
 		default:
-			System.out.println("Invalid LocatorType: " + locatorType
+			System.out.println("Invalid Locator Type: " + locatorType
 					+ ". Expected DAYS,HOURS,MICROSECONDS,MILLISECONDS,MINUTES,NANOSECONDS,SECONDS");
 		}
 
@@ -218,7 +218,7 @@ public class Keyword {
 	/**
 	 * This method is used for Add logger
 	 * 
-	 * @param locaterType
+	 * @param locatorType
 	 * @author Manisha Kale
 	 */
 	public static void logger_add(String locatorType) {
@@ -230,7 +230,7 @@ public class Keyword {
 	}
 
 	/*
-	 * This method is used forRead Json File And get Expected Result.
+	 * This method is used for Read Json File And get Expected Result.
 	 * 
 	 * @Author Manisha Kale
 	 */
@@ -265,29 +265,29 @@ public class Keyword {
 	 * 
 	 * @Author Manisha Kale
 	 */
-	public static List<String> listValueSelect(String locatorType, String LocatorValue) {
+	public static List<String> listValueSelect(String locatorType, String locatorValue) {
 		List<WebElement> liList = null;
 
 		switch (locatorType) {
 		case "XPATH":
 
-			liList = Constant.driver.findElements(By.xpath(LocatorValue));
+			liList = Constant.driver.findElements(By.xpath(locatorValue));
 			break;
 		case "CSS":
-			liList = Constant.driver.findElements(By.cssSelector(LocatorValue));
+			liList = Constant.driver.findElements(By.cssSelector(locatorValue));
 			break;
 		case "ID":
-			liList = Constant.driver.findElements(By.id(LocatorValue));
+			liList = Constant.driver.findElements(By.id(locatorValue));
 			break;
 		case "LINKTEXT":
-			liList = Constant.driver.findElements(By.linkText(LocatorValue));
+			liList = Constant.driver.findElements(By.linkText(locatorValue));
 			break;
 		case "PARTIAL_LINKTEXT":
-			liList = Constant.driver.findElements(By.partialLinkText(LocatorValue));
+			liList = Constant.driver.findElements(By.partialLinkText(locatorValue));
 			break;
 		default:
 			System.out.println(
-					"Invalid LocatorType: " + locatorType + ". Expected XPATH,CSS,ID,LINKTEXT,PARTIAL_LINKTEXT");
+					"Invalid Locator Type: " + locatorType + ". Expected XPATH,CSS,ID,LINKTEXT,PARTIAL_LINKTEXT");
 		}
 		ArrayList<String> actualResult = new ArrayList<String>();
 
@@ -299,6 +299,7 @@ public class Keyword {
 		System.out.println(liList);
 		return actualResult;
 	}
+	
 
 	/**
 	 * This method is used to maximize Window.
@@ -309,9 +310,10 @@ public class Keyword {
 		Constant.driver.manage().window().maximize();
 
 	}
+	
 
 	/*
-	 * This method is used to move Mouse Over particular WebElement.
+	 * This method is used to move Mouse hover particular WebElement.
 	 * 
 	 * @Author Manisha Kale
 	 */
