@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import Com.TestingShatra.Keywords.Keyword;
+import com.testingshastra.keywords.Keyword;
 
 public class Amazon_Pay_POM {
 	//======================================7====

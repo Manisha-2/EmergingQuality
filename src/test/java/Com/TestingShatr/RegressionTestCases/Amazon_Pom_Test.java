@@ -7,9 +7,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Com.TestingShatra.Keywords.Amazon_Pom;
-import Com.TestingShatra.Keywords.Constant;
-import Com.TestingShatra.Keywords.Keyword;
+import com.testingshastra.keywords.Amazon_Pom;
+import com.testingshastra.keywords.Constant;
+import com.testingshastra.keywords.Keyword;
 
 public class Amazon_Pom_Test {
 	static Amazon_Pom ap=new Amazon_Pom();
