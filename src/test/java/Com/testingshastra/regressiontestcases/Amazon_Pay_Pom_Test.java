@@ -1,4 +1,4 @@
-package Com.TestingShatr.RegressionTestCases;
+package com.testingshastra.regressiontestcases;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
@@ -6,15 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import  Com.TestingShatra.Keywords.Amazon_Pay_POM;
-import  Com.TestingShatra.Keywords.Amazon_Pom;
-import  Com.TestingShatra.Keywords.Constant;
-import  Com.TestingShatra.Keywords.Keyword;
+import  com.testingshastra.keywords.Amazon_Pay_POM;
+//import  com.testingshastra.keywords.Amazon_Pom;
+import  com.testingshastra.keywords.Constant;
+import  com.testingshastra.keywords.Keyword;
 
 public class Amazon_Pay_Pom_Test {
 
-	static Amazon_Pay_POM ap = new  Com.TestingShatra.Keywords.Amazon_Pay_POM();
-	static  Com.TestingShatra.Keywords.Amazon_Pay_POM apt = new  Com.TestingShatra.Keywords.Amazon_Pay_POM();
+	static Amazon_Pay_POM ap = new  com.testingshastra.keywords.Amazon_Pay_POM();
+	static  com.testingshastra.keywords.Amazon_Pay_POM apt = new  com.testingshastra.keywords.Amazon_Pay_POM();
 
 	@BeforeTest
 	public void tc_011() {

@@ -1,9 +1,9 @@
-package Com.TestingShatr.RegressionTestCases;
+package com.testingshastra.regressiontestcases;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Com.TestingShatra.Keywords.Keyword;
+import  com.testingshastra.keywords.Keyword;
 
 public class Forgot_Password {
 	@BeforeTest

@@ -1,4 +1,4 @@
-package Com.TestingShatra.Keywords;
+package com.testingshastra.keywords;
 
 
 import java.io.FileInputStream;

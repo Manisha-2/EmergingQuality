@@ -1,4 +1,4 @@
-package com.testingshatra.keywords;
+package com.testingshastra.keywords;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

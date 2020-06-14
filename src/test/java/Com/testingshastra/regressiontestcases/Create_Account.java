@@ -1,13 +1,13 @@
-package Com.TestingShatr.RegressionTestCases;
+package com.testingshastra.regressiontestcases;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Com.TestingShatra.Keywords.Constant;
-import Com.TestingShatra.Keywords.Keyword;
-import Com.TestingShatra.Keywords.Sign_Up_Page;
+import  com.testingshastra.keywords.Constant;
+import  com.testingshastra.keywords.Keyword;
+import  com.testingshastra.keywords.Sign_Up_Page;
 public class Create_Account {
 	
 

@@ -1,5 +1,7 @@
-package Com.TestingShatra.Keywords;
-import 	Com.TestingShatra.Keywords.Keyword;
+package com.testingshastra.keywords;
+
+
+import 	com.testingshastra.keywords.Keyword;
 
 public class Sign_Up_Page {
 	public static void Sign_Up(String name,String mobile_no,String pass) {
