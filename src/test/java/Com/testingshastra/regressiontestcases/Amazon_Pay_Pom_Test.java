@@ -6,12 +6,39 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+<<<<<<< HEAD:src/test/java/Com/testingshastra/regressiontestcases/Amazon_Pay_Pom_Test.java
 import  com.testingshastra.keywords.Amazon_Pay_POM;
 //import  com.testingshastra.keywords.Amazon_Pom;
 import  com.testingshastra.keywords.Constant;
 import  com.testingshastra.keywords.Keyword;
 
 public class Amazon_Pay_Pom_Test {
+=======
+import com.testingshastra.keywords.Amazon_Pay_POM;
+import com.testingshastra.keywords.Amazon_Pom;
+import com.testingshastra.keywords.Constant;
+import com.testingshastra.keywords.Keyword;
+
+public class Amazon_Pay_Pom_Test {
+	
+	
+	static Amazon_Pay_POM ap=new com.testingshastra.keywords.Amazon_Pay_POM();
+	static com.testingshastra.keywords.Amazon_Pay_POM apt=new com.testingshastra.keywords.Amazon_Pay_POM();
+	
+		@BeforeTest
+		public void tc_011() {
+			Keyword.openBrowser("Chrome");
+		}
+		@Test
+		public void tc_021() {
+			Keyword.openURL("https://www.amazon.in/");
+		}
+		
+		@Test
+	public static void tc_031() {
+		Amazon_Pom ap1 = PageFactory.initElements(Constant.driver, Amazon_Pom.class);
+		ap1.click_On_Amazon_Pay();
+>>>>>>> master:src/test/java/Com/TestingShatr/RegressionTestCases/Amazon_Pay_Pom_Test.java
 
 	static Amazon_Pay_POM ap = new  com.testingshastra.keywords.Amazon_Pay_POM();
 	static  com.testingshastra.keywords.Amazon_Pay_POM apt = new  com.testingshastra.keywords.Amazon_Pay_POM();
