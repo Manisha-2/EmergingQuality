@@ -1,4 +1,4 @@
-package Com.TestingShatr.RegressionTestCases;
+package com.testingshastra.regressiontestcases;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
@@ -6,6 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+<<<<<<< HEAD:src/test/java/Com/testingshastra/regressiontestcases/Amazon_Pay_Pom_Test.java
+import  com.testingshastra.keywords.Amazon_Pay_POM;
+//import  com.testingshastra.keywords.Amazon_Pom;
+import  com.testingshastra.keywords.Constant;
+import  com.testingshastra.keywords.Keyword;
+
+public class Amazon_Pay_Pom_Test {
+=======
 import com.testingshastra.keywords.Amazon_Pay_POM;
 import com.testingshastra.keywords.Amazon_Pom;
 import com.testingshastra.keywords.Constant;
@@ -30,20 +38,42 @@ public class Amazon_Pay_Pom_Test {
 	public static void tc_031() {
 		Amazon_Pom ap1 = PageFactory.initElements(Constant.driver, Amazon_Pom.class);
 		ap1.click_On_Amazon_Pay();
+>>>>>>> master:src/test/java/Com/TestingShatr/RegressionTestCases/Amazon_Pay_Pom_Test.java
 
+	static Amazon_Pay_POM ap = new  com.testingshastra.keywords.Amazon_Pay_POM();
+	static  com.testingshastra.keywords.Amazon_Pay_POM apt = new  com.testingshastra.keywords.Amazon_Pay_POM();
+
+	@BeforeTest
+	public void tc_011() {
+		Keyword.openBrowser("Chrome");
+		Keyword.openURL("https://www.amazon.in/");
+		Keyword.windowHandle();
+		Keyword.implicit_Wait(3, "SECONDS");
+		Sign_In_Page.amazon_SignIn_Page("8625974462", "Manisha@23");
+		Constant.driver.navigate().back();
 	}
-		@Test
-		public static void tc_01() {
-			apt=PageFactory.initElements(Constant.driver, Amazon_Pay_POM.class);
-			apt.click_On_your_Transaction();
-			String actual=Constant.driver.getTitle();
-			
-			System.out.println(actual);
-			String expected="Your Transactions";
-			Assert.assertEquals(actual, expected);
-			Keyword.implicit_Wait(5, "SECONDS");
-			Constant.driver.navigate().back();
-		}
+
+//	
+//	@Test
+//	public static void tc_main() {
+//		Amazon_Pom ap1 = PageFactory.initElements(Constant.driver, Amazon_Pom.class);
+//		ap1.click_On_Amazon_Pay();
+//
+//	}
+//
+//	@Test
+//	public static void tc_01() {
+//		apt = PageFactory.initElements(Constant.driver, Amazon_Pay_POM.class);
+//		apt.click_On_your_Transaction();
+//		String actual = Constant.driver.getTitle();
+//
+//		System.out.println(actual);
+//		String expected = "Your Transactions";
+//		Assert.assertEquals(actual, expected);
+//		Keyword.implicit_Wait(5, "SECONDS");
+//
+//		Constant.driver.navigate().back();
+//	}
 //		@Test
 //		public static void tc_02() {
 //			apt=PageFactory.initElements(Constant.driver, Amazon_Pay_POM.class);
@@ -296,5 +326,5 @@ public class Amazon_Pay_Pom_Test {
 //			Keyword.implicit_Wait(5, "SECONDS");
 //			Constant.driver.navigate().back();
 //		}
-		
+
 }

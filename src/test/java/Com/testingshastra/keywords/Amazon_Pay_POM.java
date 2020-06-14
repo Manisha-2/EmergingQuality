@@ -1,10 +1,13 @@
-package Com.TestingShatra.Keywords;
+package com.testingshastra.keywords;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.testingshastra.keywords.Keyword;
+<<<<<<< HEAD:src/test/java/Com/testingshastra/keywords/Amazon_Pay_POM.java
+=======
 
+>>>>>>> master:src/test/java/Com/TestingShatra/Keywords/Amazon_Pay_POM.java
 public class Amazon_Pay_POM {
 	//======================================7====
 	@FindBy(xpath="//span[contains(text(),'COVID-19 Donation')]")
