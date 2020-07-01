@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Com.TestingShatr.RegressionTestCases.Create_Account">
+      <class name="com.testingshastra.regressiontestcases.Amazon_Pay_Pom_Test">
         <methods>
-          <include name="tc_011"/>
+          <include name="tc_01"/>
+          <include name="tc_main"/>
+          <include name="tc"/>
         </methods>
-      </class> <!-- Com.TestingShatr.RegressionTestCases.Create_Account -->
+      </class> <!-- com.testingshastra.regressiontestcases.Amazon_Pay_Pom_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

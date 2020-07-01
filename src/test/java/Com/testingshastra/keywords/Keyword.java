@@ -87,6 +87,7 @@ public class Keyword {
 		case "Chrome":
 			WebDriverManager.chromedriver().setup();
 			Constant.driver = new ChromeDriver();
+			Keyword.implicit_Wait(5, "SECONDS");
 			break;
 		case "Firefox":
 			WebDriverManager.firefoxdriver().setup();

@@ -2,6 +2,8 @@ package com.testingshastra.keywords;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import com.testingshastra.keywords.Keyword;
 
@@ -109,7 +111,10 @@ public class Amazon_Pay_POM {
   
 
     
-    
+    public Amazon_Pay_POM()
+    {
+    	PageFactory.initElements(Constant.driver, this);
+    }
     
     
     
@@ -119,7 +124,7 @@ public class Amazon_Pay_POM {
 		COVID_19_Donation.click();
 
 		}
-	
+
 public  void click_On_your_Transaction() {
 		
 	your_Transaction.click();
